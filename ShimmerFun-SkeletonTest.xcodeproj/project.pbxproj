@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		F5B4096829A4AF62001B59A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B4096729A4AF62001B59A4 /* AppDelegate.swift */; };
 		F5B4096A29A4AF62001B59A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B4096929A4AF62001B59A4 /* SceneDelegate.swift */; };
-		F5B4096C29A4AF62001B59A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B4096B29A4AF62001B59A4 /* ViewController.swift */; };
-		F5B4096F29A4AF62001B59A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5B4096D29A4AF62001B59A4 /* Main.storyboard */; };
+		F5B4096C29A4AF62001B59A4 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B4096B29A4AF62001B59A4 /* MainVC.swift */; };
 		F5B4097129A4AF65001B59A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5B4097029A4AF65001B59A4 /* Assets.xcassets */; };
 		F5B4097429A4AF65001B59A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5B4097229A4AF65001B59A4 /* LaunchScreen.storyboard */; };
+		F5B4098029A50BF8001B59A4 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B4097F29A50BF8001B59A4 /* SkeletonLoadable.swift */; };
+		F5B4098329A50C3F001B59A4 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B4098229A50C3F001B59A4 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F5B4096429A4AF62001B59A4 /* ShimmerFun-SkeletonTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShimmerFun-SkeletonTest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B4096729A4AF62001B59A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5B4096929A4AF62001B59A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F5B4096B29A4AF62001B59A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F5B4096E29A4AF62001B59A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F5B4096B29A4AF62001B59A4 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		F5B4097029A4AF65001B59A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5B4097329A4AF65001B59A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5B4097529A4AF65001B59A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5B4097F29A50BF8001B59A4 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
+		F5B4098229A50C3F001B59A4 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		F5B4096629A4AF62001B59A4 /* ShimmerFun-SkeletonTest */ = {
 			isa = PBXGroup;
 			children = (
-				F5B4096729A4AF62001B59A4 /* AppDelegate.swift */,
-				F5B4096929A4AF62001B59A4 /* SceneDelegate.swift */,
-				F5B4096B29A4AF62001B59A4 /* ViewController.swift */,
-				F5B4096D29A4AF62001B59A4 /* Main.storyboard */,
-				F5B4097029A4AF65001B59A4 /* Assets.xcassets */,
-				F5B4097229A4AF65001B59A4 /* LaunchScreen.storyboard */,
-				F5B4097529A4AF65001B59A4 /* Info.plist */,
+				F5B4098129A50C25001B59A4 /* Extensions */,
+				F5B4097B29A4F955001B59A4 /* Resources */,
+				F5B4097C29A4F97F001B59A4 /* Scene */,
 			);
 			path = "ShimmerFun-SkeletonTest";
+			sourceTree = "<group>";
+		};
+		F5B4097B29A4F955001B59A4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F5B4097029A4AF65001B59A4 /* Assets.xcassets */,
+				F5B4097229A4AF65001B59A4 /* LaunchScreen.storyboard */,
+				F5B4096729A4AF62001B59A4 /* AppDelegate.swift */,
+				F5B4096929A4AF62001B59A4 /* SceneDelegate.swift */,
+				F5B4097529A4AF65001B59A4 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F5B4097C29A4F97F001B59A4 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				F5B4097E29A50BED001B59A4 /* Core */,
+				F5B4097D29A4F986001B59A4 /* Controllers */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		F5B4097D29A4F986001B59A4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F5B4096B29A4AF62001B59A4 /* MainVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F5B4097E29A50BED001B59A4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F5B4097F29A50BF8001B59A4 /* SkeletonLoadable.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F5B4098129A50C25001B59A4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F5B4098229A50C3F001B59A4 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +170,6 @@
 			files = (
 				F5B4097429A4AF65001B59A4 /* LaunchScreen.storyboard in Resources */,
 				F5B4097129A4AF65001B59A4 /* Assets.xcassets in Resources */,
-				F5B4096F29A4AF62001B59A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +180,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5B4096C29A4AF62001B59A4 /* ViewController.swift in Sources */,
+				F5B4096C29A4AF62001B59A4 /* MainVC.swift in Sources */,
 				F5B4096829A4AF62001B59A4 /* AppDelegate.swift in Sources */,
+				F5B4098029A50BF8001B59A4 /* SkeletonLoadable.swift in Sources */,
 				F5B4096A29A4AF62001B59A4 /* SceneDelegate.swift in Sources */,
+				F5B4098329A50C3F001B59A4 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F5B4096D29A4AF62001B59A4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F5B4096E29A4AF62001B59A4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F5B4097229A4AF65001B59A4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,10 +324,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ShimmerFun-SkeletonTest/Info.plist";
+				INFOPLIST_FILE = "ShimmerFun-SkeletonTest/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -315,10 +351,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ShimmerFun-SkeletonTest/Info.plist";
+				INFOPLIST_FILE = "ShimmerFun-SkeletonTest/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
